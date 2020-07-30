@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" style="-fx-background-color: E0E0E0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainSceneController">
+   <children>
+      <VBox fx:id="vMain" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="795.0" style="-fx-background-color: E0E0E0;">
+              <menus>
+                <Menu mnemonicParsing="false" text="UniLink">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#developerInfoPushed" text="Developer Info" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#quitButtonPushed" text="Quit UniLink" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Data">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#importData" text="Import Data" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#exportData" text="Export Data" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox spacing="5.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#createNewEvent" text="New Event Post" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#createNewSale" text="New Sale Post" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#createNewJob" text="New Job Post" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label text="Type:" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboType" prefHeight="25.0" prefWidth="72.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label text="Status: " HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboStatus" prefHeight="25.0" prefWidth="91.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label text="Creator: " HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboCreator" prefHeight="25.0" prefWidth="104.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <AnchorPane>
+               <children>
+                  <Label layoutX="14.0" layoutY="9.0" text="Current User:" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="9.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="currentUserID" layoutX="123.0" layoutY="9.0" text=" " textFill="#eb0e0e" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="9.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="716.0" layoutY="6.0" mnemonicParsing="false" onAction="#logOutButtonPushed" text="Log Out" AnchorPane.bottomAnchor="6.0" AnchorPane.topAnchor="6.0" />
+                  <Button layoutX="358.0" layoutY="6.0" mnemonicParsing="false" onAction="#loadDataButtonPushed" text="Load Data" AnchorPane.bottomAnchor="6.0" AnchorPane.topAnchor="6.0" />
+               </children>
+            </AnchorPane>
+            <ListView fx:id="listView" style="-fx-background-color: E0E0E0;" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
