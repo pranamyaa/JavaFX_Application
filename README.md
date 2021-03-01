@@ -8,4 +8,4 @@ We have implemented the User Interace using Java FX and Scene Builder and Data P
 
 After successfully signing in the main dashboard page looks loke this: 
 
-![Main Dashboard](/Images/P1.png)
+![Main Dashboard](/Images/P1.PNG)
